@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이어폰 타이머</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div id="current-time">00:00:00</div>
+  </header>
+
+  <h1>
+    이어폰 전용 타이머
+    <span class="sub-eng">Earphone Timer</span>
+  </h1>
+
+  <main>
+    <section id="timer-section">
+      <div id="time-alarm-wrapper">
+        <div id="time-input">
+          <input type="number" id="hours" min="0" max="99" value="00" maxlength="2" />
+          <span>:</span>
+          <input type="number" id="minutes" min="0" max="59" value="00" maxlength="2" />
+          <span>:</span>
+          <input type="number" id="seconds" min="0" max="59" value="00" maxlength="2" />
+        </div>
+
+        <div id="alarm-choice">
+          <label class="alarm-btn">
+            <input type="radio" name="alarmSound" value="quiet" checked />
+            <span>조용한</span>
+          </label>
+          <label class="alarm-btn">
+            <input type="radio" name="alarmSound" value="loud" />
+            <span>시끄러운</span>
+          </label>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button id="startBtn">시작</button>
+        <button id="stopBtn">중지</button>
+        <button id="resetBtn">초기화</button>
+      </div>
+    </section>
+
+    <section id="description">
+      <h2>이 웹앱에 대하여 / About this web app</h2>
+      <p class="kor">
+        이 타이머는 당신이 조용한 공간에서 사용할 때 이어폰에서만 알람 소리가 들리도록 합니다.<br />
+        이어폰을 연결하지 않았을 때 스피커에서는 알람 소리가 매우 작게 들릴 수 있으며, 조용한 환경에서만 잘 들릴 수 있습니다.<br />
+        이어폰을 꼭 착용하고 사용하는 것을 권장합니다.<br />
+        원하는 시간을 설정하고 시작 버튼을 누르면 설정한 시간 후에 알람이 울립니다.<br />
+        중지 및 초기화 버튼으로 타이머를 조작할 수 있습니다.<br />
+        현재 시각은 당신 기기의 시간 기준입니다.
+      </p>
+      <p class="eng">
+        This timer ensures the alarm sound only plays through your earphones when used in a quiet space.<br />
+        If earphones are not connected, the alarm may be very quiet from the speakers and audible only in silent environments.<br />
+        We recommend always using earphones.<br />
+        Set the desired time and press the start button; the alarm will sound after the set duration.<br />
+        Use stop and reset buttons to control the timer.<br />
+        The current time is based on your device’s clock.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
